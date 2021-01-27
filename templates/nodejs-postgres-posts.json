@@ -2,7 +2,7 @@
     "kind": "Template",
     "apiVersion": "v1",
     "metadata": {
-      "name": "nodejs-postgres-tasks",
+      "name": "nodejs-postgres-posts",
       "annotations": {
         "openshift.io/display-name": "Node.js + postgres (Ephemeral)",
         "description": "An example Node.js application with a Postgres database. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nodejs-ex/blob/master/README.md.\n\nWARNING: Any data stored will be lost upon pod destruction. Only use this template for testing.",
@@ -17,8 +17,8 @@
     },
     "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nodejs-ex/blob/master/README.md.",
     "labels": {
-        "template": "nodejs-postgres-tasks",
-        "app": "nodejs-postgres-tasks"
+        "template": "nodejs-postgres-posts",
+        "app": "nodejs-postgres-posts"
     },
     "objects": [
       {
@@ -166,7 +166,7 @@
               "imageChangeParams": {
                 "automatic": true,
                 "containerNames": [
-                  "nodejs-postgres-tasks"
+                  "nodejs-postgres-posts"
                 ],
                 "from": {
                   "kind": "ImageStreamTag",
@@ -192,7 +192,7 @@
             "spec": {
               "containers": [
                 {
-                  "name": "nodejs-postgres-tasks",
+                  "name": "nodejs-postgres-posts",
                   "image": " ",
                   "ports": [
                     {
@@ -429,7 +429,7 @@
         "displayName": "Name",
         "description": "The name assigned to all of the frontend objects defined in this template.",
         "required": true,
-        "value": "nodejs-postgres-tasks"
+        "value": "nodejs-postgres-posts"
       },
       {
         "name": "NAMESPACE",
@@ -469,7 +469,7 @@
         "name": "CONTEXT_DIR",
         "displayName": "Context Directory",
         "description": "Set this to the relative path to your project if it is not in the root of your repository.",
-        "value": "tasks-api"
+        "value": "posts-api"
       },
       {
         "name": "APPLICATION_DOMAIN",
@@ -503,13 +503,6 @@
               "name": "NAMESPACE",
               "required": true,
               "value": "openshift"
-          },
-          {
-              "description": "Maximum amount of memory the Rails container can use.",
-              "displayName": "Memory Limit",
-              "name": "MEMORY_LIMIT",
-              "required": true,
-              "value": "512Mi"
           },
           {
               "description": "Maximum amount of memory the PostgreSQL container can use.",
