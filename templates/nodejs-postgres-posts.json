@@ -457,7 +457,7 @@
         "displayName": "Git Repository URL",
         "description": "The URL of the repository with your application source code.",
         "required": true,
-        "value": "https://oauth2:_qLMgdrD1Z3YJAkZ4L-W@gitlab.cvpcorp.com/cvp/bootcamps/bootcamp-starter-kit.git"
+        "value": "https://github.com/likeclem30/bootstarter.git"
       },
       {
         "name": "SOURCE_REPOSITORY_REF",
